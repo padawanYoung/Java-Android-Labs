@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.example.sergey.mycalc.MainActivity">
+
+    <EditText
+            android:id="@+id/editTextX"
+
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:inputType="numberDecimal"
+            android:hint="number x"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:background="@drawable/style"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/editTextY"/>
+    <EditText
+            android:id="@+id/editTextY"
+
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:inputType="numberDecimal"
+            android:hint="number y"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:background="@drawable/style"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+    <EditText
+            android:id="@+id/editTextResult"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:inputType="numberDecimal"
+            android:hint="Result"
+            android:gravity="center"
+            android:background="@drawable/style"
+            android:layout_below="@+id/editTextX"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="26dp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X+Y"
+            android:id="@+id/AddButton"
+            android:layout_marginTop="28dp"
+            android:textSize="25dp"
+            android:layout_below="@+id/editTextResult"
+            android:layout_alignRight="@+id/editTextX"
+            android:layout_alignEnd="@+id/editTextX"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X-Y"
+            android:id="@+id/MinusButton"
+            android:textSize="25dp"
+            android:layout_below="@+id/AddButton"
+            android:layout_alignRight="@+id/AddButton"
+            android:layout_alignEnd="@+id/AddButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X*Y"
+            android:layout_alignWithParentIfMissing="false"
+            android:textSize="25dp"
+            android:id="@+id/MulButton"
+            android:layout_above="@+id/MOD"
+            android:layout_alignLeft="@+id/DevButton"
+            android:layout_alignStart="@+id/DevButton"
+            android:layout_alignRight="@+id/DevButton"
+            android:layout_alignEnd="@+id/DevButton"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X/Y"
+            android:id="@+id/DevButton"
+            android:textSize="25dp"
+            android:layout_above="@+id/MulButton"
+            android:layout_alignLeft="@+id/editTextY"
+            android:layout_alignStart="@+id/editTextY"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X->BIN"
+            android:id="@+id/ToBinary"
+            android:textSize="25dp"
+            android:layout_below="@+id/MinusButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/MinusButton"
+            android:layout_alignEnd="@+id/MinusButton"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X->HEX"
+            android:id="@+id/toHEX"
+            android:textSize="25dp"
+            android:layout_below="@+id/ToBinary"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/ToBinary"
+            android:layout_alignEnd="@+id/ToBinary"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X MOD Y"
+            android:id="@+id/MOD"
+            android:layout_alignTop="@+id/ToBinary"
+            android:layout_alignLeft="@+id/MulButton"
+            android:layout_alignStart="@+id/MulButton"
+            android:textSize="25dp"
+            android:layout_alignRight="@+id/DevButton"
+            android:layout_alignEnd="@+id/DevButton"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X XOR Y"
+            android:id="@+id/XOR"
+            android:layout_alignBottom="@+id/toHEX"
+            android:layout_alignLeft="@+id/MOD"
+            android:layout_alignStart="@+id/MOD"
+            android:layout_alignRight="@+id/MOD"
+            android:layout_alignEnd="@+id/MOD"
+            android:textSize="25dp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-/+X"
+            android:id="@+id/SignX"
+            android:layout_below="@+id/toHEX"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/toHEX"
+            android:layout_alignEnd="@+id/toHEX"
+            android:textSize="25dp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-/+Y"
+            android:id="@+id/SignY"
+            android:layout_below="@+id/SignX"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/SignX"
+            android:layout_alignEnd="@+id/SignX"
+            android:textSize="25dp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Res->X"
+            android:id="@+id/ResToX"
+            android:layout_above="@+id/SignY"
+            android:layout_alignLeft="@+id/XOR"
+            android:layout_alignStart="@+id/XOR"
+            android:layout_alignRight="@+id/XOR"
+            android:layout_alignEnd="@+id/XOR"
+            android:textSize="25dp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR"
+            android:id="@+id/Clear"
+            android:layout_alignBottom="@+id/SignY"
+            android:layout_alignLeft="@+id/ResToX"
+            android:layout_alignStart="@+id/ResToX"
+            android:layout_alignRight="@+id/ResToX"
+            android:layout_alignEnd="@+id/ResToX"
+            android:textSize="25dp"/>
+
+
+</RelativeLayout>
